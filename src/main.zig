@@ -20,6 +20,7 @@ const yes = @import("yes.zig");
 const hostname = @import("hostname.zig");
 const basename = @import("basename.zig");
 const dirname = @import("dirname.zig");
+const seq = @import("seq.zig");
 
 // Command definitions
 const Command = struct {
@@ -47,6 +48,7 @@ const commands = [_]Command{
     .{ .name = "hostname", .func = hostname.hostname_main },
     .{ .name = "basename", .func = basename.basename_main },
     .{ .name = "dirname", .func = dirname.dirname_main },
+    .{ .name = "seq", .func = seq.seq_main },
 };
 
 // Main dispatcher
