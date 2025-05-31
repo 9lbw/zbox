@@ -6,6 +6,7 @@ const echo = @import("echo.zig");
 const cat = @import("cat.zig");
 const ls = @import("ls.zig");
 const mkdir = @import("mkdir.zig");
+const rm = @import("rm.zig");
 
 // Command definitions
 const Command = struct {
@@ -19,6 +20,7 @@ const commands = [_]Command{
     .{ .name = "cat", .func = cat.cat_main },
     .{ .name = "ls", .func = ls.ls_main },
     .{ .name = "mkdir", .func = mkdir.mkdir_main },
+    .{ .name = "rm", .func = rm.rm_main },
 };
 
 // Main dispatcher
