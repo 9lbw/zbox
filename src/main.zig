@@ -8,6 +8,9 @@ const ls = @import("ls.zig");
 const mkdir = @import("mkdir.zig");
 const rm = @import("rm.zig");
 const cp = @import("cp.zig");
+const touch = @import("touch.zig");
+const mv = @import("mv.zig");
+const pwd = @import("pwd.zig");
 
 // Command definitions
 const Command = struct {
@@ -23,6 +26,9 @@ const commands = [_]Command{
     .{ .name = "mkdir", .func = mkdir.mkdir_main },
     .{ .name = "rm", .func = rm.rm_main },
     .{ .name = "cp", .func = cp.cp_main },
+    .{ .name = "touch", .func = touch.touch_main },
+    .{ .name = "mv", .func = mv.mv_main },
+    .{ .name = "pwd", .func = pwd.pwd_main },
 };
 
 // Main dispatcher

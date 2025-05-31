@@ -69,7 +69,7 @@ fn copyFile(src_path: []const u8, dest_path: []const u8, options: CpOptions) !vo
     // Check if destination exists and handle accordingly
     if (cwd.access(dest_path, .{})) {
         if (!options.force) {
-            // In a real implementation, we might prompt the user here
+            // TODO: In a real implementation, we might prompt the user here
             // For now, we'll just overwrite
         }
     } else |_| {
