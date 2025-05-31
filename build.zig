@@ -17,7 +17,7 @@ pub fn build(b: *std.Build) void {
 
     // This creates an executable. We only need one module for our main.zig file.
     const exe = b.addExecutable(.{
-        .name = "zutils",
+        .name = "zbox",
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,

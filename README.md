@@ -1,4 +1,4 @@
-# zutils
+# zbox
 
 core unix utilities reimplemented in zig
 
@@ -11,7 +11,7 @@ this project aims to fill that gap by providing memory safe coreutils with zero 
 
 ## what is this
 
-zutils is a single multicall binary that can behave as different unix utilities depending on how its invoked  
+zbox is a single multicall binary that can behave as different unix utilities depending on how its invoked  
 you can either call it directly with a command name or symlink it to create individual utility binaries  
 the goal is to eventually implement most of the posix standard utilities while maintaining compatibility  
 
@@ -37,25 +37,25 @@ cross platform support anywhere zig runs
 ```bash
 # clone and build
 git clone <repo>
-cd zutils
+cd zbox
 zig build
 
 # use as multicall binary
-./zig-out/bin/zutils echo hello world
-./zig-out/bin/zutils cat /etc/passwd
-./zig-out/bin/zutils ls -l /tmp
-./zig-out/bin/zutils mkdir -p some/deep/path
-./zig-out/bin/zutils rm -rf unwanted_dir
-./zig-out/bin/zutils cp -r source_dir dest_dir
+./zig-out/bin/zbox echo hello world
+./zig-out/bin/zbox cat /etc/passwd
+./zig-out/bin/zbox ls -l /tmp
+./zig-out/bin/zbox mkdir -p some/deep/path
+./zig-out/bin/zbox rm -rf unwanted_dir
+./zig-out/bin/zbox cp -r source_dir dest_dir
 
 # create symlinks for individual utilities
 cd /usr/local/bin
-ln -s /path/to/zutils echo
-ln -s /path/to/zutils cat
-ln -s /path/to/zutils ls
-ln -s /path/to/zutils mkdir
-ln -s /path/to/zutils rm
-ln -s /path/to/zutils cp
+ln -s /path/to/zbox echo
+ln -s /path/to/zbox cat
+ln -s /path/to/zbox ls
+ln -s /path/to/zbox mkdir
+ln -s /path/to/zbox rm
+ln -s /path/to/zbox cp
 
 # now use them like normal
 echo hello world
