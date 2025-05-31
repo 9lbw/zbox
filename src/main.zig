@@ -140,8 +140,9 @@ const commands = [_]Command{
     .{ .name = "echo", .func = echo_main },
     .{ .name = "cat", .func = cat_main },
     .{ .name = "ls", .func = ls_main },
-    .{ .name = "mkdir", .func = mkdir_main }, // Add this line
+    .{ .name = "mkdir", .func = mkdir_main },
 };
+
 // Main dispatcher
 pub fn main() !void {
     var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
