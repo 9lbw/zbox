@@ -11,6 +11,8 @@ const cp = @import("cp.zig");
 const touch = @import("touch.zig");
 const mv = @import("mv.zig");
 const pwd = @import("pwd.zig");
+const chmod = @import("chmod.zig");
+const wc = @import("wc.zig");
 
 // Command definitions
 const Command = struct {
@@ -29,6 +31,8 @@ const commands = [_]Command{
     .{ .name = "touch", .func = touch.touch_main },
     .{ .name = "mv", .func = mv.mv_main },
     .{ .name = "pwd", .func = pwd.pwd_main },
+    .{ .name = "chmod", .func = chmod.chmod_main },
+    .{ .name = "wc", .func = wc.wc_main },
 };
 
 // Main dispatcher
