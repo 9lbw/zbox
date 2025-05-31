@@ -13,6 +13,13 @@ const mv = @import("mv.zig");
 const pwd = @import("pwd.zig");
 const chmod = @import("chmod.zig");
 const wc = @import("wc.zig");
+const whoami = @import("whoami.zig");
+const true_util = @import("true.zig");
+const false_util = @import("false.zig");
+const yes = @import("yes.zig");
+const hostname = @import("hostname.zig");
+const basename = @import("basename.zig");
+const dirname = @import("dirname.zig");
 
 // Command definitions
 const Command = struct {
@@ -33,6 +40,13 @@ const commands = [_]Command{
     .{ .name = "pwd", .func = pwd.pwd_main },
     .{ .name = "chmod", .func = chmod.chmod_main },
     .{ .name = "wc", .func = wc.wc_main },
+    .{ .name = "whoami", .func = whoami.whoami_main },
+    .{ .name = "true", .func = true_util.true_main },
+    .{ .name = "false", .func = false_util.false_main },
+    .{ .name = "yes", .func = yes.yes_main },
+    .{ .name = "hostname", .func = hostname.hostname_main },
+    .{ .name = "basename", .func = basename.basename_main },
+    .{ .name = "dirname", .func = dirname.dirname_main },
 };
 
 // Main dispatcher
