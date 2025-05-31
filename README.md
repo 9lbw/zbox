@@ -20,6 +20,8 @@ currently implemented utilities:
 - cat - concatenate and display files  
 - ls - list directory contents
 - mkdir - create directories
+- rm - remove files and directories
+- cp - copy files and directories
 
 ## features
 
@@ -43,6 +45,8 @@ zig build
 ./zig-out/bin/zutils cat /etc/passwd
 ./zig-out/bin/zutils ls -l /tmp
 ./zig-out/bin/zutils mkdir -p some/deep/path
+./zig-out/bin/zutils rm -rf unwanted_dir
+./zig-out/bin/zutils cp -r source_dir dest_dir
 
 # create symlinks for individual utilities
 cd /usr/local/bin
@@ -50,12 +54,16 @@ ln -s /path/to/zutils echo
 ln -s /path/to/zutils cat
 ln -s /path/to/zutils ls
 ln -s /path/to/zutils mkdir
+ln -s /path/to/zutils rm
+ln -s /path/to/zutils cp
 
 # now use them like normal
 echo hello world
 cat myfile.txt
 ls /home
 mkdir newdir
+rm old_file
+cp important.txt backup.txt
 ```
 
 ## project status
