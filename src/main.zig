@@ -21,6 +21,14 @@ const hostname = @import("hostname.zig");
 const basename = @import("basename.zig");
 const dirname = @import("dirname.zig");
 const seq = @import("seq.zig");
+const env = @import("env.zig");
+const printenv = @import("printenv.zig");
+const sleep = @import("sleep.zig");
+const id = @import("id.zig");
+const head = @import("head.zig");
+const tail = @import("tail.zig");
+const cut = @import("cut.zig");
+const tee = @import("tee.zig");
 
 // Command definitions
 const Command = struct {
@@ -49,6 +57,14 @@ const commands = [_]Command{
     .{ .name = "basename", .func = basename.basename_main },
     .{ .name = "dirname", .func = dirname.dirname_main },
     .{ .name = "seq", .func = seq.seq_main },
+    .{ .name = "env", .func = env.env_main },
+    .{ .name = "printenv", .func = printenv.printenv_main },
+    .{ .name = "sleep", .func = sleep.sleep_main },
+    .{ .name = "id", .func = id.id_main },
+    .{ .name = "head", .func = head.head_main },
+    .{ .name = "tail", .func = tail.tail_main },
+    .{ .name = "cut", .func = cut.cut_main },
+    .{ .name = "tee", .func = tee.tee_main },
 };
 
 // Main dispatcher
