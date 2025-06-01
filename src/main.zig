@@ -29,6 +29,7 @@ const head = @import("head.zig");
 const tail = @import("tail.zig");
 const cut = @import("cut.zig");
 const tee = @import("tee.zig");
+const grep = @import("grep.zig");
 
 // Command definitions
 const Command = struct {
@@ -65,6 +66,7 @@ const commands = [_]Command{
     .{ .name = "tail", .func = tail.tail_main },
     .{ .name = "cut", .func = cut.cut_main },
     .{ .name = "tee", .func = tee.tee_main },
+    .{ .name = "grep", .func = grep.grep_main },
 };
 
 // Main dispatcher
