@@ -3,16 +3,16 @@ const std = @import("std");
 pub fn seq_main(args: []const []const u8) !void {
     const stdout = std.io.getStdOut().writer();
     const stderr = std.io.getStdErr().writer();
-    
+
     if (args.len == 0) {
         try stderr.print("seq: missing operand\n", .{});
         std.process.exit(1);
     }
-    
+
     var start: f64 = 1;
     var increment: f64 = 1;
     var end: f64 = undefined;
-    
+
     // Parse arguments based on count
     switch (args.len) {
         1 => {
@@ -53,13 +53,13 @@ pub fn seq_main(args: []const []const u8) !void {
             std.process.exit(1);
         },
     }
-    
+
     // Handle zero increment
     if (increment == 0) {
         try stderr.print("seq: increment must not be zero\n", .{});
         std.process.exit(1);
     }
-    
+
     // Generate sequence
     var current = start;
     if (increment > 0) {
